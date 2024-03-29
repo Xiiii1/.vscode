@@ -1,3 +1,4 @@
+// Debugging
 {
     "version": "0.2.0",
     "configurations": [
@@ -5,7 +6,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/${fileBasenameNoExtension}.exe",   //對應執行檔名稱
+            "program": "${workspaceRoot}/${fileBasenameNoExtension}.exe",   //產生與.c檔相同名稱的執行檔
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
@@ -20,7 +21,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build"    //在偵錯前要執行的task，對應 tasks.json 內的 taskName (label?)
+            "preLaunchTask": "build"    //在偵錯前要執行的task，對應 tasks.json 內的 taskName (label)
         }
     ]
 }
