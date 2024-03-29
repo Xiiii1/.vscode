@@ -1,6 +1,7 @@
-// See https://go.microsoft.com/fwlink/?LinkId=733558
-// for the documentation about the tasks.json format
+//Building
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
@@ -8,7 +9,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "${file}", "-o", "${fileBasenameNoExtension}.exe" //讓編譯出來的exe檔名和.cpp原始檔一樣
+                "-g", "${file}", "-o", "${fileBasenameNoExtension}.exe"
             ],
             "group": {
                 "kind": "build",
