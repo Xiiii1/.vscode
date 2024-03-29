@@ -1,18 +1,64 @@
 {
-    "files.associations": {
-        "iosfwd": "cpp",
-        "ostream": "cpp",
-        "iostream": "cpp",
-        "*.tcc": "cpp",
-        "unordered_map": "cpp",
-        "unordered_set": "cpp",
-        "string_view": "cpp",
-        "cmath": "cpp",
-        "iomanip": "cpp",
-        "numeric": "cpp",
-        "chrono": "cpp",
-        "limits": "cpp",
-        "valarray": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.errorSquiggles": "disabled",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
+    "files.autoSave": "afterDelay",
+    "C_Cpp.default.compilerPath": "C:\\MinGW\bin\\gcc.exe",         //看剛剛MinGW放哪，注意是兩條斜線
+    "C_Cpp.formatting": "vcFormat",
+    "code-runner.runInTerminal": true,
+        "[cpp]": {
+            "editor.formatOnType": true,
+            "editor.formatOnSave": true,
+            "editor.renderIndentGuides": true,
+            "editor.insertSpaces": true,
+            "editor.detectIndentation": true,
+            "editor.tabSize": 4,
+            "editor.guides.indentation": true
+        },
+        "[c]":{
+            "editor.formatOnType": true,
+            "editor.formatOnSave": true,
+            "editor.renderIndentGuides": true,
+            "editor.insertSpaces": true,
+            "editor.detectIndentation": true,
+            "editor.tabSize": 4,
+            "editor.guides.indentation": true
+        },
+        "clang.executable" : "C:\\Program Files\\LLVM\\bin\\clang.exe", //看剛剛的Clang放哪裡，注意是兩條斜線
+        "clang.cxxflags": [
+            "-std=c++17",                                               //c++，應該不用改
+            "-IC:\\MinGW\\include",                                     //不是放C槽的話記得改，注意是兩條斜線
+            "-IC:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include",           //不是放C槽的話記得改，注意是兩條斜線
+            "-IC:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++",      //不是放C槽的話記得改，注意是兩條斜線
+            "-I${workspaceFolder}\\include",
+            "-I${cwd}"
+        ],
+        "clang.cflags":[
+            "-std=c11",                                                 //c，應該不用改
+            "-IC:\\MinGW\\include",                                     //不是放C槽的話記得改，注意是兩條斜線
+            "-IC:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include",           //不是放C槽的話記得改，注意是兩條斜線
+            "-IC:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\objc",     //不是放C槽的話記得改，注意是兩條斜線
+            "-I${workspaceFolder}\\include",                              
+            "-I${cwd}"
+        ],
+        "files.associations": {
+            "iosfwd": "cpp",
+            "ostream": "cpp",
+            "iostream": "cpp",
+            "*.tcc": "cpp",
+            "unordered_map": "cpp",
+            "unordered_set": "cpp",
+            "string_view": "cpp",
+            "cmath": "cpp",
+            "iomanip": "cpp",
+            "numeric": "cpp",
+            "chrono": "cpp",
+            "limits": "cpp",
+            "valarray": "cpp",
+            "stdio.h": "c"
+        },
+        "code-runner.executorMap":{
+            "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt -std=c11 && $dir$fileNameWithoutExt",     //c改這裡，應該不用改
+            "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++17 && $dir$fileNameWithoutExt" //c++改這裡，應該不用改
+        }
 }
